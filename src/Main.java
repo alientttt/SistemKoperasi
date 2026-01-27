@@ -23,6 +23,7 @@ public class Main {
         double saldo = input.nextDouble();
 
         Anggota anggota = new Anggota(id,saldo,nama,alamat,nik);
+        koperasi.tambahAnggota(anggota);
 
         System.out.println("\n--- Daftar Anggota ---");
         koperasi.tampilkanAnggota();
