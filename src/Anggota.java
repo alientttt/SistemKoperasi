@@ -1,14 +1,17 @@
 public class Anggota extends Orang {
-    public String idAnggota;
-    double saldoSimpanan;
-    Anggota(String idAnggota,double saldoSimpanan,String nama,String alamat,String nomorIdentitas){
-        super(nama,alamat,nomorIdentitas);
+    private String idAnggota;
+    private double saldo;
+    Anggota(String idAnggota,double saldo,String nama,String alamat,String nik){
+        super(nama,alamat,nik);
         this.idAnggota = idAnggota;
-        this.saldoSimpanan = saldoSimpanan;
+        this.saldo = saldo;
     }
 
-    @java.lang.Override
-    public void makeSound() {
-        System.out.println("ini dari class Anggota");
+    public String getIdAnggota(){
+        return idAnggota;
+    }
+
+    public double getSaldo(){
+        return saldo;
     }
 }

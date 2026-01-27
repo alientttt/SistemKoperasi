@@ -1,15 +1,14 @@
 public class Orang {
-    String nama;
-    String alamat;
-    String nomorIdentitas;
-    Orang(String nama,String alamat,String nomorIdentitas){
+    protected String nama;
+    protected String alamat;
+    protected String nik;
+    Orang(String nama,String alamat,String nik){
         this.nama = nama;
         this.alamat = alamat;
-        this.nomorIdentitas = nomorIdentitas;
+        this.nik = nik;
     }
 
-    public void makeSound(){
-        System.out.println("Ini dari class orang");
+    public String getNama(){
+        return nama;
     }
-
 }
