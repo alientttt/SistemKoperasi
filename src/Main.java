@@ -1,3 +1,5 @@
+import exception.AnggotaDuplikat;
+import exception.umurException;
 import model.Anggota;
 import service.Koperasi;
 
@@ -10,8 +12,11 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Koperasi koperasi = new Koperasi();
 
-        System.out.println("ID model.Anggota: ");
+        System.out.println("ID Anggota: ");
         String id = input.nextLine();
+
+        System.out.println("Umur: ");
+        int umur = input.nextInt();
 
         System.out.println("Nama: ");
         String nama = input.nextLine();
@@ -25,8 +30,17 @@ public class Main {
         System.out.println("Saldo Awal: ");
         double saldo = input.nextDouble();
 
-        Anggota anggota = new Anggota(id,saldo,nama,alamat,nik);
-        koperasi.tambahAnggota(anggota);
+        try {
+            Anggota anggota = new Anggota(id,saldo,nama,alamat,nik,umur);
+            koperasi.tambahAnggota(anggota);
+        } catch (umurException e){
+            System.out.println("Error umur: "+e.getMessage());
+        } catch (AnggotaDuplikat e){
+            System.out.println("Error data: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error sistem: "+e.getMessage());
+        }
+
 
         System.out.println("\n--- Daftar model.Anggota ---");
         koperasi.tampilkanAnggota();
