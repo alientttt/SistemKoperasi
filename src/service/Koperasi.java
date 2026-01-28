@@ -1,3 +1,7 @@
+package service;
+
+import model.Anggota;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +14,7 @@ public class Koperasi {
 
     public void tambahAnggota(Anggota anggota){
         daftarAnggota.add(anggota);
-        System.out.println("Anggota berhasil ditambahkan: " + anggota.getNama());
+        System.out.println("model.Anggota berhasil ditambahkan: " + anggota.getNama());
     }
 
     public void tampilkanAnggota(){

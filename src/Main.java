@@ -1,3 +1,6 @@
+import model.Anggota;
+import service.Koperasi;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -7,7 +10,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Koperasi koperasi = new Koperasi();
 
-        System.out.println("ID Anggota: ");
+        System.out.println("ID model.Anggota: ");
         String id = input.nextLine();
 
         System.out.println("Nama: ");
@@ -25,7 +28,7 @@ public class Main {
         Anggota anggota = new Anggota(id,saldo,nama,alamat,nik);
         koperasi.tambahAnggota(anggota);
 
-        System.out.println("\n--- Daftar Anggota ---");
+        System.out.println("\n--- Daftar model.Anggota ---");
         koperasi.tampilkanAnggota();
     }
 }

@@ -1,7 +1,9 @@
+package model;
+
 public class Anggota extends Orang {
     private String idAnggota;
     private double saldo;
-    Anggota(String idAnggota,double saldo,String nama,String alamat,String nik){
+    public Anggota(String idAnggota,double saldo,String nama,String alamat,String nik){
         super(nama,alamat,nik);
         this.idAnggota = idAnggota;
         this.saldo = saldo;
